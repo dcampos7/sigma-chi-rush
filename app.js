@@ -19,7 +19,7 @@ var auth = basicAuth(function(user, pass) {
    return (user == "active" && pass == "UncleRunkle");
 },'Super duper secret area');
 
-var admin = basicAuth(function(user, pass) {     
+var admin_auth = basicAuth(function(user, pass) {     
    return (user == "admin" && pass == "constantine");
 },'Super duper secret area');
 
@@ -35,7 +35,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', auth, routes);
-app.get('/profile', admin, admin);
+app.get('/admin', admin_auth, admin);
 
 app.use('/', routes);
 app.use('/admin', admin);
