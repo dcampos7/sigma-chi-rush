@@ -1,7 +1,36 @@
 doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+html.js(lang="en-US")
+	head
+		title= title
+
+		meta(charset="utf-8")
+
+		link(rel='shortcut icon' href='/images/favicon.png' type='image/png')
+		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' type='text/css')
+		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,600,700' type='text/css')
+		link(rel='stylesheet', href='http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css' type='text/css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap-theme.css' type='text/css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap.css' type='text/css')
+		link(rel='stylesheet', href='/stylesheets/base-style.css' type='text/css')
+
+		script(src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.bU1ZKlGZN8w.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AItRSTPOuJMJ3rMBMuf2Za2x0SikQsQYEQ/cb=gapi.loaded_0", async="")
+		script(src='/lib/jquery/jquery.js')
+		script(src='/lib/jquery/jquery-ui.js')
+		script(src='/lib/jquery/jquery.fileupload.js')
+		script(src='/lib/jquery/jquery.iframe-transport.js')
+		script(src='/lib/jquery/jquery.knob.js')
+		script(src='/lib/jquery/jquery.ui.widget.js')
+		script(src='/lib/underscore/underscore.min.js')
+		script(src='/lib/backbone/backbone-min.js')
+		script(src='/scripts/base.js')
+
+		link(rel="stylesheet", type="text/css", media="all", href="http://minimalmonkey.com/wp-content/themes/minimalmonkey/style.css")
+		script.
+			(function(h){h.className = h.className.replace('no-js','js')})(document.documentElement)
+		link(rel='stylesheet', href="/stylesheets/minimal-monkey-after.css", type="text/css")
+
+		
+	body.home.blog.cat-1-id.mm.notouch(data-twttr-rendered="true")
+
+		block content
+		include footer

@@ -1,0 +1,13 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin-bottom: -100px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+a.panel {
+	margin: 0;
+	border-radius: 0;
+}

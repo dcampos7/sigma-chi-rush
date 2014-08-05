@@ -1,0 +1,3 @@
+#!/bin/bash
+node app.js &
+cd public && coffee --watch --map --output scripts coffee

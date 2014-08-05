@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	//- h1= title
+	//- p Welcome to #{title}
+
+	header.header#header
+
+		nav.top-nav
+			a.logo(href='/')
+			div.links
+				a(href='/search/')
+					span Search
+					span Search	
+			div.links
+				a(href='/logout/')
+					span Logout
+					span Logout	
+
+	div.site.navy#site(data-color='navy')
+		.article#article
+		.labwrap#labwrap
+		.wrapper
+			.admin-content
+				span The Admin account is used to initialize a new Rush.<br>Enter the fields below to get started.
+				form.rush-info
+					input#huid(placeholder='HUID' type='text')
+					input#password(placeholder='Password' type='text')
+					input#year(placeholder='Year' type='text')
+					input#term(placeholder='Fall or Spring' type='text')
+					button.button
+						span.glyphicon.glyphicon-arrow-right
+	
+
+	script(src='/scripts/admin.js')
