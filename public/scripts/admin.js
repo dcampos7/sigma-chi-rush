@@ -3,7 +3,7 @@
   var scrapeActives;
 
   scrapeActives = function(huid, password) {
-    return $.post('./scrape-students', {
+    return $.post('./scrapers/students', {
       huid: huid,
       password: password
     });

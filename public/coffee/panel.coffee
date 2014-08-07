@@ -8,6 +8,12 @@ class StudentCollection extends Backbone.Collection
 
 	model: StudentModel
 
+	initalize: (attributes) ->
+		super attributes
+
+	url: () ->
+		'/api/fetch-students/'
+
 
 class StudentView extends TemplatedView
 
@@ -18,29 +24,34 @@ class StudentView extends TemplatedView
 	initalize: (options) ->
 		super
 
+	templateArgs: () ->
+		{student: @model}
+
 	render: () ->
 		super
-		$('#name').html(@model.get('name'))
-		$('#email').html('Email: '+@model.get('email'))
-		$('#phone').html('Phone: '+@model.get('phone'))
-		$('#house').html('House: '+@model.get('house'))
-		$('#room').html('Room: '+@model.get('room'))
-		$('#year').html('Year: '+@model.get('year'))
 
 
-Students = new StudentCollection()
-$.get('/fetch-students', (res) ->
-	Students.add(res)
-	Students.forEach((Student) ->
-		name = Student.get('name').replace(' ', '-')
-		$('.panels').append('<a id="'+name+'" href="/'+name+'/" class="panel navy" data-color="navy"></a>')
-		panel = new StudentView({el: $('#'+name), model: Student})
-		panel.render()
-	)
+students = new StudentCollection()
+students.fetch()
+
+search = $('.search input')
+stoppedTyping = null
+search.focus().keyup( ->
+	if (search.val().length > 2)
+		clearTimeout(stoppedTyping) if stoppedTyping
+		stoppedTyping = setTimeout( ->
+			$('.panels').children().remove()
+			students.each((student) ->
+				if (student.attributes.name.toLowerCase().indexOf(search.val().toLowerCase()) >= 0)
+					name = student.get('name').replace(/\ /g, '-').replace("'", "-")
+					$('.panels').append('<a id="'+name+'" href="/'+name+'/" class="panel navy" data-color="navy"></a>')
+					panel = new StudentView({el: $('#'+name), model: student})
+					panel.render()
+			)
+		, 500)
 )
 
 
 this.StudentModel = StudentModel
 this.StudentCollection = StudentCollection
 this.StudentView = StudentView
-this.Student = Student

@@ -1,5 +1,9 @@
 .mm .top-nav .logo::after{display:inline;content: 'ΣX'; left:-7px;color:#F8C230;} .mm .header h1{color:#F8C230} .icon {font-family: 'icons'}
 
+header#header {
+	min-width: 1000px;
+}
+
 .admin-content {
 	color: #000;
 	font-family: 'Gotham A','Gotham B',sans-serif;
@@ -63,4 +67,31 @@
 
 .panels .excerpt {
 	margin-top: 0px;
+}
+
+.links.search {
+	position: absolute;
+	left: 0;
+	z-index: 50;
+	padding-top: 10px;
+	width: 415px;
+}
+
+.links.search input {
+	height:32px;
+	width: 350px;
+	border:1px solid #16528e;
+	background: #fff;
+	line-height: 20px;
+	color: #0B3F73;
+	display: block;
+	float: left;
+	margin-left:15px;
+	padding:0px 10px;
+	font-size: 16px;
+	font-weight: 200;
+}
+
+.links a {
+	z-index: 100;
 }
