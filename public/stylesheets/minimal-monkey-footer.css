@@ -95,3 +95,17 @@ header#header {
 .links a {
 	z-index: 100;
 }
+
+.links.logout {
+	position: absolute;
+	right: 0;
+	z-index: 50;
+	padding-top: 10px;
+	width: 415px;
+}
+
+.links.logout a {
+	margin-top: 8px;
+	float: right;
+	margin-right:15px;
+}

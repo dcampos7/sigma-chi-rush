@@ -2,9 +2,9 @@
 
 scrapeActives = (huid, password) ->
 
-	#$.get('./scrapers/actives')
+	#$.get('/scrapers/actives')
 
-	$.post('./scrapers/students', {huid: huid, password: password})
+	$.post('/scrapers/students', {huid: huid, password: password})
 
 
 
