@@ -10,6 +10,9 @@ block content
 			a.logo(href='/')
 			div.links.search
 				input(placeholder='Search...')
+				.year#Freshman F
+				.year#Sophomore S
+				.year#Junior J
 			div.links.logout
 				a(href='/logout/')
 					span Logout
@@ -25,30 +28,30 @@ block content
 
 
 
-		h1 ΣX Rush
-		div.container
-			div.page(id='/about/')
-				div.content
-					p This is the new way we will handle and coordinate rush.
-					p It is organized and effective and will save people a ton of time.
+		//- h1 ΣX Rush
+		//- div.container
+		//- 	div.page(id='/about/')
+		//- 		div.content
+		//- 			p This is the new way we will handle and coordinate rush.
+		//- 			p It is organized and effective and will save people a ton of time.
 		
 		
-			div.page(id='/admin/')
-				div.content
-					p This is where the admin will login.
+		//- 	div.page(id='/admin/')
+		//- 		div.content
+		//- 			p This is where the admin will login.
 
-	a.site-block#site-block(href='/')
+	//- a.site-block#site-block(href='/')
 	
-	nav.site-nav
-		.next-button.horizontal
-			a(href='/page/2/')
-		.closecontainer
-			a.closebutton#closebutton(href='/')
-		.arrows#arrows
-			a.arrow.hide.previous(href='/dynamic-bezel-lines-experiment/')
-				.color
-			a.arrow.hide.next(href='/relocated-to-san-francisco/')
-				.color
+	//- nav.site-nav
+	//- 	.next-button.horizontal
+	//- 		a(href='/page/2/')
+	//- 	.closecontainer
+	//- 		a.closebutton#closebutton(href='/')
+	//- 	.arrows#arrows
+	//- 		a.arrow.hide.previous(href='/dynamic-bezel-lines-experiment/')
+	//- 			.color
+	//- 		a.arrow.hide.next(href='/relocated-to-san-francisco/')
+	//- 			.color
 
 	div.site.navy#site(data-color='navy')
 		.article#article
@@ -57,6 +60,6 @@ block content
 			//- .next-button.vertical
 			//- 	a(href='/page/2/')
 
-	include backbone/panel-template.html
+	include backbone/base-templates.html
 	script(src='/scripts/panel.js')
 	

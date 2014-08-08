@@ -96,11 +96,9 @@ router.post('/', function(req, res) {
 			console.log('Scraping '+years[year]+': '+String(start)+' - '+String(start+num-1));
 
 			browser.visit('http://facebook.college.harvard.edu/search?name_last=&name_first=&house=&assigned_house=&year='+years[year]+'&concentration=&start='+String(start)+'&num='+String(num)+'&Search=Search&view=photo', {maxWait: 100, waitFor: 10}, function() {
-		    	// compileImages(browser.html());
 		    	$ = cheerio.load(browser.html());
 		    	photos = $('.float')
 		    	browser.visit('http://facebook.college.harvard.edu/search?name_last=&name_first=&house=&assigned_house=&year='+years[year]+'&concentration=&start='+String(start)+'&num='+String(num)+'&Search=Search&view=list', {maxWait: 100, waitFor: 10}, function() {
-					// compileStudents(browser.html());
 					$ = cheerio.load(browser.html());
 					rows = $('table#list tr').slice(1);
 					iterateStudents(0, rows, rows.length-1, photos, year, function() {

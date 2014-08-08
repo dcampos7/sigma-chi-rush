@@ -1,7 +1,7 @@
 .mm .top-nav .logo::after{display:inline;content: 'ΣX'; left:-7px;color:#F8C230;} .mm .header h1{color:#F8C230} .icon {font-family: 'icons'}
 
 header#header {
-	min-width: 1000px;
+	min-width: 1200px;
 }
 
 .admin-content {
@@ -74,12 +74,12 @@ header#header {
 	left: 0;
 	z-index: 50;
 	padding-top: 10px;
-	width: 415px;
+	width: 500px;
 }
 
 .links.search input {
 	height:32px;
-	width: 350px;
+	width: 300px;
 	border:1px solid #16528e;
 	background: #fff;
 	line-height: 20px;
@@ -109,3 +109,67 @@ header#header {
 	float: right;
 	margin-right:15px;
 }
+
+.year {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: #ccc;
+    font-size: 20px;
+    padding-top: 7px;
+    padding-left:2px;
+    margin: 0px 5px;
+}
+
+.year:hover {
+    cursor: pointer;
+}
+
+.year.selected {
+    background: #0B3F73;
+}
+
+.expanded:hover {
+	cursor: default;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.recommend, a.submit-comment {
+	background-color: rgba(0,0,0,.4);
+	color: #fff;
+	padding: 10px 20px;
+	position: absolute;
+	right: 65px;
+}
+
+a.submit-comment {
+	right: 195px;
+}
+
+textarea.comment {
+	height: 100px;
+	width: 400px;
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 3px;
+	resize: none;
+	padding: 7px;
+	color: #000;
+}
+
+.fixed, .more-info {
+	display: inline-block;
+	vertical-align: top
+}
+
+.more-info {
+	width: 480px;
+	padding: 57px 40px;
+	overflow: auto;
+}
+

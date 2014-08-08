@@ -1,0 +1,73 @@
+
+	<script id='panel-template' type="text/html">
+		<div class='content'>
+			<div class='fixed'>
+				<span id='name' class='small'><%= student.attributes.name %></span>
+				<!--<span id='name'></span>
+				<h1>Dynamic Bezel Lines</h1>-->
+				<% photo = './images/missing.png' %>
+				<% if (student.attributes.photo_exists == true || student.attributes.photo_exists == 'true')
+					photo = './images/students/'+student.attributes.name.replace("'", "-").replace(/\ /g, '-')+'.jpg'; %>
+				<img src= <%= photo %> >
+				<span class='excerpt'><p id='email' class='info'>Email: <%= student.attributes.email %></p></span>
+				<span class='excerpt'><p id='phone' class='info'>Phone: <%= student.attributes.phone %></p></span>
+				<span class='excerpt'><p id='house' class='info'>House: <%= student.attributes.house %></p></span>
+				<span class='excerpt'><p id='room' class='info'>Room: <%= student.attributes.room %></p></span>
+				<span class='excerpt'><p id='year' class='info'>Year: <%= student.attributes.year %></p></span>
+				<span class='small read'><span class='icon'>v</span>More Info</span>
+			</div>
+		</div>
+		<div class='color'>
+			<div class='footer'></div>
+		</div>
+	</script>
+
+	<script id='more-info-template' type='text/html'>
+		<div>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		<a class='recommend'>Recommend</a><br>
+		<textarea class='comment' placeholder='Comment...'></textarea><br>
+		<a class='submit-comment'>Submit Comment</a>
+		</div>
+	</script>
